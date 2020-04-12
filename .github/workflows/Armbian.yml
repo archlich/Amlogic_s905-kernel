@@ -13,6 +13,8 @@ jobs:
       run: |
           #apt -y install git
           git clone https://github.com/150balbes/Build-Armbian
+    - name: build
+      run: |
           cd build
           ./compile.sh
 
