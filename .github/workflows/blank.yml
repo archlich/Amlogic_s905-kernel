@@ -7,8 +7,8 @@ jobs:
     - name: Installation depends
       run: |
         #sudo apt-get update
-        sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint
-        sudo apt-get -y install gcc make pkg-config git bison flex libelf-dev libssl-dev libncurses5-dev
+        #sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint
+        #sudo apt-get -y install gcc make pkg-config git bison flex libelf-dev libssl-dev libncurses5-dev
     - name: Clone source code
       run: |
         git clone https://github.com/150balbes/Amlogic_s905-kernel.git
@@ -25,7 +25,6 @@ jobs:
         export ARCH=arm64
         wget https://releases.linaro.org/components/toolchain/binaries/7.5-2019.12/aarch64-linux-gnu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz
         tar -Jxvf gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz
-
         export CROSS_COMPILE=/root/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
         uname -r
         
