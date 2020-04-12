@@ -11,7 +11,7 @@ jobs:
         sudo apt-get -y install gcc make pkg-config git bison flex libelf-dev libssl-dev libncurses5-dev
     - name: Clone source code
       run: |
-          apt -y install git
+          #apt -y install git
           git clone https://github.com/150balbes/Build-Armbian
           cd build
           ./compile.sh
