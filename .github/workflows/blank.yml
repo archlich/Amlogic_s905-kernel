@@ -13,15 +13,16 @@ jobs:
       run: |
         git clone https://github.com/150balbes/Amlogic_s905-kernel.git
         cd Amlogic_s905-kernel
-       #./scripts/feeds update -a
-       #./scripts/feeds install -a
+  #     ./scripts/feeds update -a
+ #      ./scripts/feeds install -a
     - name: Generate config file
       run: |
         cd Amlogic_s905-kernel
         make defconfig
+        
         export ARCH=arm64
         wget https://releases.linaro.org/components/toolchain/binaries/7.5-2019.12/aarch64-linux-gnu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz
-        tar -Jxvf https://releases.linaro.org/components/toolchain/binaries/7.5-2019.12/aarch64-linux-gnu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz
+        tar -Jxvf gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz
 
-        #export CROSS_COMPILE=/root/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
+        export CROSS_COMPILE=/root/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
         uname -r
