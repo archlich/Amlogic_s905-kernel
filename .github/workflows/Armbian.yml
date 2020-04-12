@@ -15,7 +15,7 @@ jobs:
           git clone https://github.com/150balbes/Build-Armbian
     - name: build
       run: |
-          cd build
+          cd Build-Armbian
           ./compile.sh
 
 
