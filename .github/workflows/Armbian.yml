@@ -12,4 +12,4 @@ jobs:
       run: |   
           cd Build-Armbian       
           ./compile.sh BOARD=“arm-64" BRANCH="current" RELEASE="buster" \
-          KERNEL_ONLY="no" KERNEL_CONFIGURE="no" INSTALL_HEADERS="yes" BUILD_DESKTOP="no" BUILD_MINIMAL=“no”
+          KERNEL_ONLY="no" KERNEL_CONFIGURE="no" INSTALL_HEADERS="yes" BUILD_DESKTOP="no" BUILD_MINIMAL=“yes”
